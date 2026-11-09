@@ -38,3 +38,7 @@ A Riddle comic spell could keep the drawing session available until every panel 
 Riddle also lets a user create a daily-brief goal on their phone, run it locally, inspect the cited note and accept or decline the suggestion. In a separate trial, 12 of the first 17 briefs met the usefulness rubric. The fifth miss put the target of 36 out of 40 out of reach. The misses included suggestions to start work that was blocked or already finished.
 
 *Measurements from 5–9 November 2026. These are project-run results on one station. The ComfyUI comparison covers the two-page comic. The other rows compare execution choices within Ouroboros.*
+
+## Riddle Legacy walkthrough
+
+Follow a delivery-planning spell from the visual builder to its execution trace, then see how Workbench evaluates a local model and how the desktop connects to inference providers. [Open the illustrated walkthrough](riddle-core-legacy/README.md).
