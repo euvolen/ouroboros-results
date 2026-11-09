@@ -1,0 +1,151 @@
+{
+  "schema": "ouroboros.results.videos.v1",
+  "measured_date": "2026-11-09",
+  "workstation": {
+    "os": "Windows",
+    "gpu": "AMD Radeon RX 7900 XT",
+    "vram_gib": 20
+  },
+  "construction": "Generated still images, local speech and music, captions, image pans and zooms, FFmpeg edit.",
+  "videos": [
+    {
+      "file": "mentats-baseline.mp4",
+      "sha256": "8f7697ccf282e563b6fcfd4d9d700bbfb5dd32ef6038cfd8f8aea421c036cac4",
+      "bytes": 27296860,
+      "duration_s": 120.0,
+      "width": 1080,
+      "height": 1920,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "id": "mentats-baseline",
+      "title": "The last calculation of Thufir Hawat",
+      "generation_s": 1461.224,
+      "scope": "Prepared script through verified film and exported source assets; setup, research and gallery transfer excluded.",
+      "scene_count": 18,
+      "voice": "Piper Alan, British English",
+      "creative_approval": false
+    },
+    {
+      "file": "mentats-grouped.mp4",
+      "sha256": "1c82100bcd8be39f0f3271893b6f1807c6908821b2a505d9d51a4a6f72e86441",
+      "bytes": 27522818,
+      "duration_s": 120.0,
+      "width": 1080,
+      "height": 1920,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "id": "mentats-grouped",
+      "title": "The last calculation of Thufir Hawat",
+      "generation_s": 525.111,
+      "scope": "Prepared script through verified film and exported source assets; setup, research and gallery transfer excluded.",
+      "scene_count": 18,
+      "voice": "Piper Alan, British English",
+      "creative_approval": false
+    },
+    {
+      "file": "science-engine.mp4",
+      "sha256": "5fa4123672837dd9cee8f02e705f6e7707f1bcac045425f78b1af7a848b5548e",
+      "bytes": 3546664,
+      "duration_s": 25.4,
+      "width": 1080,
+      "height": 1920,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "id": "science-engine",
+      "title": "Inside a gasoline engine",
+      "ready_after_batch_start_s": 173.058,
+      "scope": "Shared three-video run; elapsed from common batch start until this film was verified.",
+      "scene_count": 4,
+      "creative_approval": false,
+      "speech_check": {
+        "word_edits": 2,
+        "reference_words": 71,
+        "scope": "Narration before the final music mix."
+      }
+    },
+    {
+      "file": "science-relativity.mp4",
+      "sha256": "145b10ca8a7aeeb393625dd7d071386cd4bd272025cdb126fb9cfec4e1b3814a",
+      "bytes": 3956805,
+      "duration_s": 26.1,
+      "width": 1080,
+      "height": 1920,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "id": "science-relativity",
+      "title": "Why a moving clock ticks slowly",
+      "ready_after_batch_start_s": 214.894,
+      "scope": "Shared three-video run; elapsed from common batch start until this film was verified.",
+      "scene_count": 4,
+      "creative_approval": false,
+      "speech_check": {
+        "word_edits": 1,
+        "reference_words": 78,
+        "scope": "Narration before the final music mix."
+      }
+    },
+    {
+      "file": "science-m-theory.mp4",
+      "sha256": "97e15198d29a9fbd052793d0af7679bac9e046a146e491f5b2dbee14d34d673e",
+      "bytes": 5519888,
+      "duration_s": 30.8,
+      "width": 1080,
+      "height": 1920,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "id": "science-m-theory",
+      "title": "Why physicists proposed M-theory",
+      "ready_after_batch_start_s": 263.236,
+      "scope": "Shared three-video run; elapsed from common batch start until this film was verified.",
+      "scene_count": 4,
+      "creative_approval": false,
+      "speech_check": {
+        "word_edits": 7,
+        "reference_words": 71,
+        "scope": "Narration before the final music mix."
+      }
+    }
+  ],
+  "mentats_comparison": {
+    "baseline_s": 1461.224,
+    "grouped_s": 525.111,
+    "elapsed_reduction_percent": 64.06,
+    "baseline_stages_s": {
+      "Labs score": 39.307,
+      "18 Labs voice lines": 135.782,
+      "18 Labs portraits": 1209.556,
+      "Picture edit, sound mix and verification": 75.686
+    },
+    "grouped_stages_s": {
+      "Labs score": 23.428,
+      "18 Labs voice lines": 141.63,
+      "18 Labs portraits": 285.629,
+      "Picture edit, sound mix and verification": 73.265
+    },
+    "portrait_matches": 18,
+    "portrait_count": 18,
+    "image_request_width": 4,
+    "active_sampler_peak": 1,
+    "speech_checks": {
+      "reference_words": 299,
+      "baseline_full_mix_edits": 42,
+      "grouped_full_mix_edits": 131,
+      "baseline_scene_edits": 42,
+      "grouped_scene_edits": 45
+    }
+  },
+  "science_batch": {
+    "elapsed_s": 263.242,
+    "scope": "Fresh native processes; cached installed weights; fixed scripts; includes profile verification, TTS, score, portraits, assembly and validation.",
+    "stages_s": {
+      "engine_four_portraits_s": 86.716,
+      "m-theory_four_portraits_s": 47.175,
+      "music_owner_through_scores_s": 52.401,
+      "relativity_four_portraits_s": 51.462,
+      "time_to_image_owner_launch_s": 59.102
+    },
+    "count": 3,
+    "timing_note": "Per-video completion times share one start. They are cumulative and must not be added."
+  },
+  "quality": "Structural media checks passed. Human creative approval is pending."
+}

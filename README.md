@@ -6,6 +6,8 @@ On one Windows workstation with an AMD Radeon RX 7900 XT (20 GB), a two-page com
 
 ## Media workflows
 
+Watch the [Mentats films and three science shorts](videos/README.md), with their recorded production times and downloadable MP4s.
+
 Times are elapsed seconds. The last column gives the percentage of baseline time saved.
 
 | Timed work | Baseline | Ouroboros comparison | Time saved |
