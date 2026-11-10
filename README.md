@@ -1,10 +1,29 @@
-# Ouroboros benchmark results
+# What can an application do with a model’s judgment?
 
-Ouroboros is a local inference engine. Riddle is an assistant built on it. A Riddle workflow, called a *spell*, can use one model to plan a comic, another to draw the panels, and a vision model to check them. The benchmark that matters to the reader is how long they wait for the PDF.
+Imagine asking an application to turn a story into a comic. Who decides where the first panel ends? The page editor knows how to place six images. A model can read a new story and decide which six moments to draw. Once that decision comes back as six panel descriptions, software can commission the illustrations, lay out the pages and return a PDF. The author can spend their attention on whether the reader can follow the story.
+
+**This is the idea behind Riddle. A developer can give part of an application a job that requires judgment, then write what happens with the answer.** A *spell* describes who gets which evidence, which tools they can use, what can proceed independently and what must pass a check. Ouroboros supplies local inference. The spell gives those calls a purpose.
 
 On one Windows workstation with an AMD Radeon RX 7900 XT (20 GB), a two-page comic took **3 min 58 s** with Ouroboros and **5 min 05 s** with the matched ComfyUI image workflow. Both clocks started at the story prompt and stopped at the finished PDF.
 
-**Why would someone move a task out of chat?** Imagine handing tomorrow’s dispatch brief to a colleague. Today you know which note cancelled the morning collection, which source confirmed the replacement, and what to check before sending. A chat can give you today’s answer. With Riddle you can also hand over the instructions and the check. The colleague can run them on a new note and inspect what happened. [See the actual brief and its saved check in Riddle Legacy](riddle-core-legacy/README.md#the-second-time-you-do-the-job).
+We have a finished PDF and a timing result. We also found continuity problems. That distinction matters to the person commissioning the comic: the engine can deliver all six panels on time while the story still needs an editor.
+
+## Why orchestrate?
+
+In chat, a person often acts as the application. They read the plan, copy each scene to an image tool, decide what to redo and assemble the result. A spell lets the author describe those handoffs once. Models can interpret each new input or propose a revision. Ordinary code can measure a file, run a test or render the final cut. The person can retain the decisions they actually care about, such as approving the story before illustration begins.
+
+Language makes this a different kind of programming. “Choose the moment when the reader first understands the danger” can be an executable instruction even when nobody can specify a reliable formula for choosing that moment. Tokens represent a model’s input or output, and embeddings encode features numerically. The application can pass a scene list, an image, a test result or a request for human review between steps. What makes those steps useful together is their agreement about what each result means and who may act on it.
+
+| Application | What orchestration makes possible | What we have shown |
+| --- | --- | --- |
+| A media studio | The author gives story direction. A planner chooses scenes, generators supply assets, and an editor assembles them. A continuity review can send a particular scene back for revision. | Story prompt to comic PDF and prepared scripts to finished films. Continuity and final audio quality still needed review. |
+| A development team | Opus could investigate a bug and author a spell that a local worker uses to reproduce and fix it. Sol could independently author a review using the bug report and test evidence. Routine reruns could stay local while a disputed design decision goes back to the planner. | Legacy supports spell authoring, local and cloud model selection, bounded delegation, sandboxed coding tools and saved evaluations. This exact two-author repair and review is a proposed experiment. |
+| An assistant away from the desk | A recurring workflow could collect updates locally, compare them with yesterday’s state and notify the user only when a decision is due. The user could inspect the evidence and steer the work from a phone. | Legacy has interval Rituals and run history. The newer assistant separately demonstrated creating a goal, running a local brief and reviewing its cited suggestion from a phone. In one trial, 12 of the first 17 briefs met the usefulness rubric. |
+| A robot sharing space with people | While a CPU controller follows a path, an NPU could watch for obstacles and a GPU model could interpret an unfamiliar scene. Each observation needs a timestamp. The controller must be able to stop even if interpretation is late. | We have exercised vision and segmentation on tested inputs. Concurrent perception, movement and reaction on a physical robot remain an experiment. |
+
+One further possibility follows from the development example. **A model can produce a procedure as its deliverable.** A team could inspect that procedure, test it on a known bug, grant it limited tools and reuse it on the next issue. That would let one expensive planning session improve many cheaper local runs. We have yet to measure whether the savings survive the cost of authoring, review and failed runs.
+
+For a first look at the authoring tools, follow a dispatch note from a local answer to a saved check, then inspect a four-step run whose final writer failed. [Illustrated Riddle Legacy walkthrough](riddle-core-legacy/README.md#the-second-time-you-do-the-job).
 
 ## Media workflows
 
