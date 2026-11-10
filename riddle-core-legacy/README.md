@@ -4,6 +4,27 @@ Riddle Legacy is a desktop workbench for building and testing AI workflows. A **
 
 We asked the desktop to plan a delivery using four tasks and ten days of capacity. A tool supplied the figures, two model steps examined them, and a final step tried to write the plan. Following that cast from the builder to its result shows where a workflow can succeed mechanically and still disappoint its reader.
 
+### Organize work in workspaces
+
+A workspace brings a project's skills, spells, tools, evaluations and assets together. You could keep a comic studio in one workspace, a research workflow in another, and coding experiments in a third. Each workspace has its own saved conversations and run history.
+
+Use the workspace menu at the top left to switch projects. The **+** button creates a workspace from a template or starts an empty one with base tools. You can also import a workspace from a local folder or Git repository. Open **Settings → Workspace** to change its name, description and appearance, or manage its container.
+
+| Part | What it holds |
+| --- | --- |
+| Workspace content | Editable skills, spell graphs, tools, evaluations and project assets |
+| Execution history | Saved run records and results associated with that workspace |
+| Workspace container | The project's running service and installed tools, with access to its workspace and runtime directories |
+| Shared inference setup | The station's model catalog, loaded models and measured configurations, available across workspaces |
+
+Switching workspaces keeps the station's inference setup available and leaves existing workspace services running. A spell step can still select its own model. Running a package spell requires its workspace container to be started.
+
+To share a workflow, share its workspace package and prepare the required models and connections on the receiving machine. The recipient can inspect the definitions, edit the skills, run the saved evaluation cases and cast the spell against their own inference setup.
+
+For a more precisely specified environment, Workspace Capsule tooling can package definitions with image and model locks, provenance and optional saved state. Activation checks the required dependencies. Credentials are supplied locally. Capturing the environment helps repeat a workflow; generated answers still need evaluation.
+
+For this walkthrough, the delivery-planning spell ran in a disposable example workspace with its own container and run records.
+
 ### Build the workflow in the Laboratory
 
 Open **Laboratory → Spell builder** and select **Capacity-Checked Delivery Plan**. Read the graph from left to right. **Calculate** runs a tool against the example task data. Its output goes to **scope**, **risk**, and the final **plan** step. The two analysis steps also send their findings to **plan**. Those arrows determine which evidence is available when the writer runs.
