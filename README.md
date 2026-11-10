@@ -4,6 +4,8 @@ Ouroboros is a local inference engine. Riddle is an assistant built on it. A Rid
 
 On one Windows workstation with an AMD Radeon RX 7900 XT (20 GB), a two-page comic took **3 min 58 s** with Ouroboros and **5 min 05 s** with the matched ComfyUI image workflow. Both clocks started at the story prompt and stopped at the finished PDF.
 
+**Why would someone move a task out of chat?** Imagine handing tomorrow’s dispatch brief to a colleague. Today you know which note cancelled the morning collection, which source confirmed the replacement, and what to check before sending. A chat can give you today’s answer. With Riddle you can also hand over the instructions and the check. The colleague can run them on a new note and inspect what happened. [See the actual brief and its saved check in Riddle Legacy](riddle-core-legacy/README.md#the-second-time-you-do-the-job).
+
 ## Media workflows
 
 Watch the [Mentats films and three science shorts](videos/README.md), with their recorded production times and downloadable MP4s.
@@ -22,6 +24,17 @@ Times are elapsed seconds. The last column gives the percentage of baseline time
 
 **Film.** One run per configuration included 18 portraits, narration, music, editing and verification. Grouping brought the portrait stage from 1,209.56 s to 285.63 s. All 18 portraits matched the baseline. Only one sampler was active at a time in the grouped run. On the final audio mix, a speech recognizer made 42 word edits against the 299-word script on the baseline mix and 131 on the grouped mix. Checking the scenes individually gave 42 and 45 edits, respectively.
 
+## The size of the image job changes the result
+
+On the same 20 GB AMD station, we timed how long a client waited for Z-Image Turbo to deliver one or more views of a red gear. Each cell is one run with the same weights at 512 × 512. Both clients delivered the requested count. Renders differed across engines, so these times establish delivery speed on this fixture only.
+
+| Images requested | Ouroboros installed node | Lemonade v2026.45.3, released backend | Lemonade, matched diffusion binary |
+| --- | ---: | ---: | ---: |
+| One | 87.01 s | 197.30 s | **69.48 s** |
+| Eight | **98.16 s** | 533.41 s | 109.05 s |
+
+For someone waiting for one preview, matched Lemonade finished about 18 seconds sooner. For someone waiting for eight variants, Ouroboros delivered the set about 11 seconds sooner. Changing Lemonade’s backend and compatible settings closed most of the original batch gap. The products used their respective delivery formats, and first-use effects were visible. A separate text → image → text workflow finished in 88.41 s on Ouroboros and 94.37 s on matched Lemonade. Its final check read the image dimensions from a manifest. [Lemonade release used in the comparison](https://github.com/lemonade-sdk/lemonade/releases/tag/v2026.45.3).
+
 ## Repeated text work
 
 A reviewer sometimes asks a short follow-up about material it has already read. We timed the same two-step text workflow with its earlier context reset or retained. These were synthetic repeated inputs with eight-token completions. Each timing is a median over six measurements in two sessions. The timer started after model loading.
@@ -39,7 +52,7 @@ A Riddle comic spell could keep the drawing session available until every panel 
 
 Riddle also lets a user create a daily-brief goal on their phone, run it locally, inspect the cited note and accept or decline the suggestion. In a separate trial, 12 of the first 17 briefs met the usefulness rubric. The fifth miss put the target of 36 out of 40 out of reach. The misses included suggestions to start work that was blocked or already finished.
 
-*Measurements from 5–9 November 2026. These are project-run results on one station. The ComfyUI comparison covers the two-page comic. The other rows compare execution choices within Ouroboros.*
+*Measurements from 5–10 November 2026. These are project-run results on one station. The ComfyUI comparison covers the two-page comic. The Lemonade comparison covers the image requests and handoff described above.*
 
 ## Riddle Legacy walkthrough
 

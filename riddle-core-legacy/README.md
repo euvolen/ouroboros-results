@@ -1,6 +1,41 @@
 # Inside Riddle Legacy
 
-Riddle Legacy is a desktop workbench for building and testing AI workflows. A **skill** gives a model one job. A **spell** connects skills and tools into a graph. A **cast** is one execution of that graph, with its own inputs, outputs and history.
+## The second time you do the job
+
+Yesterday’s dispatch note said the 10:00 collection was cancelled. The replacement was **14:00**, confirmed by **KB-17**. In a chat you can paste the note, ask for a brief and check the answer yourself. For a one-off, that may be all you need. Now imagine someone else taking the next shift. What would you hand them so they could do the job and tell whether their answer was any good?
+
+In the legacy desktop we gave a local model the note. Its brief included the replacement time and its source. We also saved that example with two required values. Now someone editing the instructions or switching the model can run yesterday’s example again and see if either fact disappears. The expected time belongs to **this example**. Tomorrow’s note supplies tomorrow’s time.
+
+![Workbench showing the saved dispatch example, its two required values and the passing result](images/03-evaluations.png)
+
+That check passed once. It would also pass an answer that mentioned both times without saying which was cancelled. A dispatcher still has a meaningful decision to make: should the check require the brief to distinguish a cancelled collection from a confirmed one? Saving the case gives the next person a specific mistake to look for.
+
+### When is it worth building a workflow?
+
+| Something you find yourself doing | What you can hand over in Riddle Legacy |
+| --- | --- |
+| Pasting the same instructions and reminding the model what counts as a good answer | A saved task and examples to run after the instructions or model change. Workbench keeps the outputs for comparison. |
+| Copying a calculation into two reviews, then piecing together a final answer | A spell that delivers the calculation to both reviewers and their findings to the writer. The Loom records what each actually received. |
+| Starting over because one reviewer used the wrong input | The run history and its intermediate outputs. The graph API can rerun a step or its dependent branch and mark affected results stale. |
+| Asking a teammate to repeat a process on their machine | A workspace with the definitions and evaluation cases. The teammate configures the required models and connections locally and can inspect their own run. |
+| Repeating a known check at intervals | A Ritual that runs the saved workflow, records each iteration and prevents overlap. It can be paused or steered. |
+
+The setup costs time. A task earns that time back when the instructions, handoffs or checks will matter again. We have measured model and workflow elapsed times. How much human preparation or review time this saves remains an open question.
+
+### Where the other features earn their place
+
+- **While exploring**, chat can branch from an earlier answer, and useful thought cards can be saved to the Grimoire. A person can try alternatives before deciding which steps deserve a permanent place.
+- **When evidence is scattered**, workspace Knowledge can find passages in an indexed local collection. A skill can receive permission to search it. A separate writer can work from the evidence passed to it. Search snippets and generated summaries still need review.
+- **When the next step depends on the input**, a Crossroad routes to a specialist. A delegated skill can have its own model and narrower tool permissions. A review step can send a draft back for a bounded revision.
+- **When a result needs an action**, a step can call a schema-checked tool directly. The coding agent can inspect a project and propose edits under its approval settings. Saved MCP connections let a workspace expose selected external tools.
+- **When you know the outcome before you know the steps**, a Goal can propose work from granted skills and submit a candidate for review against acceptance criteria. Runtime Assistance can help turn a recipe into workspace material for review.
+- **When someone else needs to operate it**, a Scroll freezes a spell definition, a Capsule can pin workspace dependencies, and the API lets another client run and watch a job. Per-step usage helps explain which model accounted for tokens and estimated spend.
+
+Forge serves a different user here. An engineer investigating a local model can inspect its structure and probe supported paths. The dispatcher can run the brief without learning any of that.
+
+## Follow a complete run
+
+A **skill** gives a model one job. A **spell** connects skills and tools. A **cast** is one execution, with its own inputs, outputs and history.
 
 We asked the desktop to plan a delivery using four tasks and ten days of capacity. A tool supplied the figures, two model steps examined them, and a final step tried to write the plan. Following that cast from the builder to its result shows where a workflow can succeed mechanically and still disappoint its reader.
 
@@ -54,8 +89,6 @@ For a second example, we selected **Example Evidence Writer** and supplied a dis
 In **Workbench → Spells**, select **Evidence Brief Helper**, then **Evaluations → New case**. Enter the dispatch prompt, choose **Contains every value**, and put `14:00` and `KB-17` on separate lines. Save the case and select **Run case**. The report shows the assertion results and the actors that actually ran.
 
 The one-step spell passed **1/1 cases** on local Qwen2.5-1.5B-Instruct. The check establishes that both expected strings occurred and execution succeeded. It leaves open whether the wording is clear or whether the answer also contains a contradictory time. For the larger delivery spell, a useful case would check the capacity figures, dependencies and presence of an actual milestone plan.
-
-![Workbench Evaluations showing the saved dispatch case, the expected values and the passing result](images/03-evaluations.png)
 
 ### Choose where inference runs
 
