@@ -1,0 +1,43 @@
+{
+  "schema": "ouroboros.wave-showcase.v1",
+  "date": "2026-11-13",
+  "environment": {
+    "host": "Windows x64 / AMD Ryzen 9 5950X",
+    "simulation": "MuJoCo 3.3.7",
+    "robot_framework": "robosuite 1.5.2",
+    "robot": "GR1, aligned anchored pelvis",
+    "rendering": "CPU OSMesa, Front 640x360",
+    "neural_model_decisions": false
+  },
+  "cases": 20,
+  "passed": 20,
+  "kinds": {
+    "reach": 7,
+    "pause-resume": 7,
+    "cancel-return": 6
+  },
+  "completed_waves": 14,
+  "cancelled_and_returned": 6,
+  "max_hold_drift_rad": 0.0007929965262059024,
+  "max_endpoint_position_error_m": 0.0037163762392799413,
+  "clips": [
+    {
+      "name": "pause-resume",
+      "frames": 177,
+      "playback_fps": 20,
+      "playback_seconds": 8.85
+    },
+    {
+      "name": "cancel-return",
+      "frames": 104,
+      "playback_fps": 20,
+      "playback_seconds": 5.2
+    }
+  ],
+  "limitations": [
+    "Anchored GR1 simulation with deterministic targets.",
+    "Twenty passing cases include six cancellations, not twenty completed waves.",
+    "Recordings use simulation time, not elapsed execution time.",
+    "No free-body balance, hardware or general robot-safety qualification."
+  ]
+}

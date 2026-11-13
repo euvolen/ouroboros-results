@@ -1,0 +1,75 @@
+{
+  "schema": "ouroboros.humanoid-showcase.v1",
+  "date": "2026-11-12",
+  "environment": {
+    "host": "Windows x64 / AMD Ryzen 9 5950X",
+    "simulation": "MuJoCo 3.3.7",
+    "robot_framework": "robosuite 1.5.2",
+    "robot": "GR1 with anchored pelvis",
+    "rendering": "CPU OSMesa, Front, 640x360",
+    "neural_model_decisions": false
+  },
+  "passed_profile_types": 31,
+  "outcomes": [
+    {
+      "name": "primitive input profiles",
+      "profiles": 9,
+      "cases": 180,
+      "passed": 180
+    },
+    {
+      "name": "named joint programs",
+      "profiles": 11,
+      "programs": 220,
+      "passed": 220,
+      "primitive_checks": 440
+    },
+    {
+      "name": "spatial poses",
+      "profiles": 5,
+      "cases": 100,
+      "passed": 100
+    },
+    {
+      "name": "fist and pointing shapes",
+      "profiles": 4,
+      "cases": 80,
+      "passed": 80
+    },
+    {
+      "name": "thumbs-up lifecycle",
+      "profiles": 2,
+      "cases": 40,
+      "passed": 40,
+      "completed_shapes": 28,
+      "cancelled_and_opened": 12
+    }
+  ],
+  "recordings": [
+    {
+      "file": "assets/rolled-wave.mp4",
+      "poster": "assets/rolled-wave.jpg",
+      "duration_s": 8.2,
+      "simulation_fps": 20
+    },
+    {
+      "file": "assets/thumbs-up.mp4",
+      "poster": "assets/thumbs-up.jpg",
+      "duration_s": 6.8,
+      "simulation_fps": 20
+    },
+    {
+      "file": "assets/supported-foot.mp4",
+      "poster": "assets/supported-foot.jpg",
+      "duration_s": 2.65,
+      "simulation_fps": 20
+    }
+  ],
+  "limitations": [
+    "Anchored-pelvis simulation; not standing, walking or physical hardware.",
+    "Targets were deterministic; no model chose these movements.",
+    "Counts apply only to the sampled supported postures.",
+    "Recordings use simulation time and omit planning/rendering waits.",
+    "Empty-hand opening does not demonstrate object release."
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "schema": "ouroboros.album-showcase.v1",
+  "date": "2026-11-11",
+  "hardware": {
+    "os": "Windows x64",
+    "gpu": "AMD Radeon RX 7900 XT",
+    "dedicated_vram_gb": 20,
+    "cpu": "AMD Ryzen 9 5950X"
+  },
+  "models": {
+    "writer": "Devstral Small 2 24B Instruct Q4_K_M",
+    "image": "Z-Image Turbo",
+    "music": "ACE-Step 1.5 Turbo"
+  },
+  "album": {
+    "title": "Neverland Lab Experiments",
+    "tracks": 12,
+    "playback_seconds": 1440,
+    "requested_bpm_range": [
+      138,
+      166
+    ],
+    "automatic_vocal_check": {
+      "model": "Local Whisper base.en",
+      "exact_hooks": 7,
+      "cases": 12,
+      "limitation": "Sung-word recognition is approximate. This is an automatic check, without a human listening score."
+    },
+    "original_audio": {
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "sample_width_bits": 16
+    },
+    "artwork": {
+      "cover_size_px": [
+        1400,
+        1400
+      ]
+    }
+  },
+  "recorded_music_job_seconds": 95.053,
+  "timing_scope": "Sum of accepted music-job timings, not full end-to-end production time. Setup, rejected assets, mastering and packaging excluded.",
+  "files": {
+    "01.mp3": {
+      "bytes": 2991416,
+      "sha256": "3013895847ff3daea6cd7adb3c110412b936ddc6252c93590d4d4ebafc711cd0"
+    },
+    "02.mp3": {
+      "bytes": 2991418,
+      "sha256": "feb1991379c0893f5f84490c789e8de0ff049827848cb277506867e078112e7d"
+    },
+    "03.mp3": {
+      "bytes": 2991420,
+      "sha256": "03ef1acbe785142c3ba8f31f43767620036b9afc831aad3040f9f842110f654e"
+    },
+    "04.mp3": {
+      "bytes": 2991421,
+      "sha256": "83303ab8f06d211e545b811c4a61eb46cd2f70aa1aca2f23ecb7e06bf5e4c0cf"
+    },
+    "05.mp3": {
+      "bytes": 2991418,
+      "sha256": "375bfed8b97522e5ad160ba28e6c3715e8a59782aaa2e65cf46cc3224e3ab0e7"
+    },
+    "06.mp3": {
+      "bytes": 2991429,
+      "sha256": "9a6b2394ef9d2e883925e6331a4fbfc125749636545f48dc986975f308886d24"
+    },
+    "07.mp3": {
+      "bytes": 2991422,
+      "sha256": "f11d4147920ad1773fe96e3cb6b0af888e6439eaae9da2699ca521069e52581b"
+    },
+    "08.mp3": {
+      "bytes": 2991415,
+      "sha256": "2aebdf5a1f0168ae783b70b77e080d5ea59143095e959adeea0f25a8ccce90d2"
+    },
+    "09.mp3": {
+      "bytes": 2991425,
+      "sha256": "f226d218be6e809af40a0d69d79ada82382123269dfbacef92cdc63e63c61108"
+    },
+    "10.mp3": {
+      "bytes": 2991420,
+      "sha256": "ca9426901c397d5854b983669a201c600ba0645fa02644d190efe59ce4bb8166"
+    },
+    "11.mp3": {
+      "bytes": 2991422,
+      "sha256": "2e093f5d82dc30d1263f9a6b463dbeeb6ddc43702054695d06dc511332119a8e"
+    },
+    "12.mp3": {
+      "bytes": 2991423,
+      "sha256": "b80012f46029c352c9424b6014e602559c4f206148c2cb9169a032465d353cc4"
+    },
+    "riddle-team-full-album.mp3": {
+      "bytes": 34671410,
+      "sha256": "89259948fd469683de288bec59b11e13a9929452b5ccf503a121c7b83d264d7f"
+    },
+    "cover.jpg": {
+      "bytes": 438804,
+      "sha256": "21d1c93aa5ed8c35f9947572d4ca06015540ae328c81a27d9c76af9dda479d09"
+    },
+    "album.json": {
+      "bytes": 14146,
+      "sha256": "3d5e6a020de3c851e93abdc0eef00406e72877355708ef675b097ac2715368a6"
+    },
+    "booklet.md": {
+      "bytes": 11966,
+      "sha256": "733875e93912039f9665bb34ee422a788c0550e45a19b443eca95930f80c0020"
+    },
+    "index.html": {
+      "bytes": 17285,
+      "sha256": "fb846f5fb228f9d9bd87fa0428225f3824b64d5b68aa3ec20bc38da9905c132d"
+    },
+    "playlist.m3u8": {
+      "bytes": 674,
+      "sha256": "4e317ed8d4635cc2944e59e7c087bdfce73e757ccf978f53a5fcda9ea8c372b3"
+    }
+  },
+  "release_archive": {
+    "filename": "riddle-team-media.zip",
+    "bytes": 376792618,
+    "sha256": "45e2b6e705a7f42b1e00f079c9294852905373bb060217cb09d4649fe6051729"
+  },
+  "file_checksum_scope": "Files as stored in this Git repository. The release ZIP is checked separately by release_archive.sha256."
+}

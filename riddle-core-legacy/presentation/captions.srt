@@ -1,0 +1,75 @@
+1
+00:00:00,520 --> 00:00:05,410
+How do you plan a delivery? This spell connects tasks so calculations feed
+
+2
+00:00:05,410 --> 00:00:08,043
+scope and risk reviewers, then the writer.
+
+3
+00:00:09,312 --> 00:00:14,651
+On this station, the cast completed all four steps in twenty-five point one
+
+4
+00:00:14,651 --> 00:00:19,581
+seconds. The final model output was a tool-call-shaped fragment where a reader
+
+5
+00:00:19,581 --> 00:00:21,224
+needed a milestone plan.
+
+6
+00:00:22,478 --> 00:00:27,291
+For a second example, we selected Example Evidence Writer and supplied a
+
+7
+00:00:27,291 --> 00:00:32,504
+dispatch note. The ten o'clock collection had been cancelled and the two in
+
+8
+00:00:32,504 --> 00:00:36,515
+the afternoon replacement was confirmed by source KB dash seventeen.
+
+9
+00:00:37,770 --> 00:00:42,929
+The saved case looks for the replacement time and its source, yet it could
+
+10
+00:00:42,929 --> 00:00:44,771
+still pass a contradictory answer.
+
+11
+00:00:46,020 --> 00:00:51,912
+The operator loads a model on the station and chooses it for a spell step.
+
+12
+00:00:51,912 --> 00:00:55,447
+This legacy demonstration used local inference on the CPU.
+
+13
+00:00:56,728 --> 00:01:02,758
+Choose an OpenAI or Anthropic preset, set the endpoint, and supply the name of
+
+14
+00:01:02,758 --> 00:01:05,773
+the environment variable holding the API key.
+
+15
+00:01:07,020 --> 00:01:12,221
+The subscription cards here use an installed command line tool and its
+
+16
+00:01:12,221 --> 00:01:16,122
+existing login, though these specific cards are currently disconnected.
+
+17
+00:01:17,395 --> 00:01:22,833
+The next dispatcher reruns the saved case after changing the model or
+
+18
+00:01:22,833 --> 00:01:27,365
+instructions. She personally reads the answer to verify conflicting times,
+
+19
+00:01:27,365 --> 00:01:30,537
+since the automatic test only checks strings.

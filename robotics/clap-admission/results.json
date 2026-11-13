@@ -1,0 +1,28 @@
+{
+  "schema": "ouroboros.clap-showcase.v1",
+  "date": "2026-11-13",
+  "environment": {
+    "host": "Windows x64 / AMD Ryzen 9 5950X",
+    "simulation": "MuJoCo 3.3.7",
+    "robot_framework": "robosuite 1.5.2",
+    "robot": "GR1, aligned anchored pelvis",
+    "rendering": "CPU OSMesa, Front 640x360",
+    "neural_model_decisions": false
+  },
+  "attempts": 3,
+  "claps_completed": 0,
+  "neutral_returns_verified": 3,
+  "outcome": "The tested contact poses were rejected for collisions before clapping.",
+  "recording": {
+    "frames": 63,
+    "simulation_playback_fps": 20,
+    "duration_s": 3.15,
+    "wall_time_not_represented": true
+  },
+  "limitations": [
+    "No successful clap is shown or claimed.",
+    "Anchored GR1 simulation with deterministic targets.",
+    "This result does not establish that every other posture is impossible.",
+    "No hardware qualification."
+  ]
+}

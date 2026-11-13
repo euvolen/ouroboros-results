@@ -1,0 +1,60 @@
+{
+  "schema": "ouroboros.robot-showcase.v1",
+  "date": "2026-11-11",
+  "hardware": {
+    "os": "Windows x64",
+    "gpu": "AMD Radeon RX 7900 XT",
+    "dedicated_vram_gb": 20,
+    "cpu": "AMD Ryzen 9 5950X 16-Core"
+  },
+  "model": "Devstral Small 2 24B Instruct 2512 Q4_K_M",
+  "cohorts": {
+    "clean-scripted": {
+      "cases": 20,
+      "passed": 20,
+      "first_attempt_not_grasped": 0,
+      "recovered_placements": 0,
+      "episode_wall_s_sum": 75.79700000025332
+    },
+    "clean-model": {
+      "cases": 20,
+      "passed": 20,
+      "first_attempt_not_grasped": 0,
+      "recovered_placements": 0,
+      "episode_wall_s_sum": 173.42299999995157
+    },
+    "recovery-scripted": {
+      "cases": 20,
+      "passed": 20,
+      "first_attempt_not_grasped": 20,
+      "recovered_placements": 20,
+      "episode_wall_s_sum": 125.70400000014342
+    },
+    "recovery-model": {
+      "cases": 20,
+      "passed": 20,
+      "first_attempt_not_grasped": 20,
+      "recovered_placements": 20,
+      "episode_wall_s_sum": 287.88999999989755
+    }
+  },
+  "recording": {
+    "file": "assets/replay.mp4",
+    "poster": "assets/poster.jpg",
+    "duration_seconds": 59.826213,
+    "width": 1280,
+    "height": 720,
+    "video_codec": "H.264",
+    "audio_codec": "AAC",
+    "sha256": "b164d9f45e6280031e45dd116c8cab183ac19a4bed57c5bc26c31576a57457a8",
+    "bytes": 2547359
+  },
+  "timing_scope": "Episode-loop wall time; setup and replay production excluded. Simulation is unpaced and pauses for model decisions, so these are not robot reaction latencies.",
+  "limitations": [
+    "Simulated Panda on one fixed can-sorting task; no physical robot qualification.",
+    "Model observations used structured simulator state, not camera-only grasping.",
+    "The scripted reference also passed all cases and was faster on this fixed task.",
+    "Replay speeds up movement and omits inference waits.",
+    "Measurements come from one workstation."
+  ]
+}

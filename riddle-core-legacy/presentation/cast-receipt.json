@@ -1,0 +1,17 @@
+{
+  "schema": "riddle.presentation-showcase.v1",
+  "elapsed_s": 115.508,
+  "video_bytes": 4052794,
+  "output": {
+    "scenes": 8,
+    "frames": 2191,
+    "playback_s": 91.292,
+    "sha256": "f5d37e5ae2ab845cc08e9695c7cb2aefe89f7e15bd27c23629d77eb25873d78f"
+  },
+  "audio": {
+    "integrated_lufs": -14.7,
+    "true_peak_dbtp": -1.0,
+    "generated_score_s": 92
+  },
+  "production": "Text, narration and music generated locally; video assembled on the same workstation."
+}
