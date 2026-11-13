@@ -1,0 +1,145 @@
+{
+  "title": "Inside Riddle Legacy",
+  "music": "Understated documentary instrumental, warm felt piano, soft brushed percussion, muted bass and a restrained steady pulse. Gentle, curious and spacious. No vocals. Stay quiet under a speaking voice.",
+  "scenes": [
+    {
+      "id": "builder",
+      "title": "Inside Riddle Legacy",
+      "detail": "Building the delivery plan",
+      "caption": "One calculation supplies the reviewers and the writer.",
+      "image": "01-spell-builder.png",
+      "sha256": "2d64477cfc295716a25ea8f295b4034b5f07372b3766df96e03d2a4cf43ffcc4",
+      "crop": [
+        230,
+        455,
+        1156,
+        752
+      ],
+      "heading": "Build the workflow in the Laboratory",
+      "direction": "Open with a concrete question about making a delivery plan. Introduce a spell as connected tasks. The calculation feeds scope and risk reviewers, then the writer."
+    },
+    {
+      "id": "loom",
+      "title": "Follow the evidence",
+      "detail": "What the cast actually produced",
+      "caption": "Four steps ran. The writer still owed the reader a plan.",
+      "image": "07-loom.png",
+      "sha256": "203cf7e1e5dcc16a23ac68df9a931ba24ce2274e05fc89888015a2d11ab728ae",
+      "crop": [
+        16,
+        498,
+        1370,
+        948
+      ],
+      "heading": "Cast it and read the Loom",
+      "direction": "Follow the delivery example through the Loom. Mention that the four steps ran, yet the writer returned a tool-call fragment instead of a usable milestone plan. Do not say it made a tool call."
+    },
+    {
+      "id": "workbench",
+      "title": "Test one piece",
+      "detail": "A dispatch note changes",
+      "caption": "The afternoon collection replaces the cancelled morning pickup.",
+      "image": "02-workbench.png",
+      "sha256": "89f682ea9d2ca3ba429532aabf3fdb264e138bb7b03da1c69d3784f179f57b03",
+      "crop": [
+        268,
+        353,
+        1171,
+        670
+      ],
+      "heading": "Try one part in Workbench",
+      "direction": "Explicitly introduce a separate dispatch example. In Workbench, a local writer read a note: the ten o'clock collection was cancelled and two in the afternoon was confirmed. Spell times out for speaking."
+    },
+    {
+      "id": "evaluations",
+      "title": "Save the case",
+      "detail": "The next run has a check",
+      "caption": "The saved case checks the replacement time and its source.",
+      "image": "03-evaluations.png",
+      "sha256": "8b990161b8ec27c2ba65239eb0e2b1b59c5effaaeeb629b92f63167607c4e672",
+      "crop": [
+        305,
+        494,
+        1178,
+        815
+      ],
+      "heading": "Turn the example into a repeatable check",
+      "direction": "Name the two things the saved case looks for: the replacement time and its source. Explain it could still pass a contradictory answer. Use plain language instead of technical words like strings.",
+      "spoken_checks": [
+        "\\btime\\b",
+        "\\b(source|reference)\\b"
+      ]
+    },
+    {
+      "id": "local",
+      "title": "Choose the engine",
+      "detail": "A model on the station",
+      "caption": "Local model settings are shared across workspaces.",
+      "image": "04-local-engine.png",
+      "sha256": "df3c374f92b996509c41dbb0beeb89db819f9f6e2f8af61aa0b044c038253c75",
+      "crop": [
+        173,
+        239,
+        1321,
+        562
+      ],
+      "heading": "Choose where inference runs",
+      "direction": "Explain where computation happens. The operator loads a model on the station and chooses it for a spell step. The legacy demonstration used local inference. Use ordinary spoken words, without product names or menu navigation."
+    },
+    {
+      "id": "cloud",
+      "title": "An optional route",
+      "detail": "Connecting a cloud provider",
+      "caption": "A provider preset, an endpoint and a credential reference.",
+      "image": "05-cloud-engines.png",
+      "sha256": "cb023d255236d216b8fc9120cd217244764253cd3718f978ce405ec51893bb59",
+      "crop": [
+        182,
+        166,
+        1335,
+        455
+      ],
+      "heading": "Choose where inference runs",
+      "direction": "Describe the optional cloud setup shown in this screenshot. The operator chooses a provider and supplies the name of an environment variable for the key. Do not imply any remote call happened."
+    },
+    {
+      "id": "subscriptions",
+      "title": "Account connections",
+      "detail": "An existing CLI login",
+      "caption": "Each subscription card shows its connection status.",
+      "image": "06-subscriptions.png",
+      "sha256": "d6116461d38e3f2764966848005c69aedd9f4f0270aea5c4d7c9c38278716117",
+      "crop": [
+        194,
+        217,
+        1414,
+        686
+      ],
+      "heading": "Choose where inference runs",
+      "direction": "Explain that a subscription card can use an installed command line tool and its existing login. The cards in this demonstration are disconnected. Do not claim a subscription was used."
+    },
+    {
+      "id": "handover",
+      "title": "Ready for the next shift",
+      "detail": "Repeat the dispatch check",
+      "caption": "Hand over the instructions, the note and the saved case.",
+      "image": "03-evaluations.png",
+      "sha256": "8b990161b8ec27c2ba65239eb0e2b1b59c5effaaeeb629b92f63167607c4e672",
+      "crop": [
+        262,
+        110,
+        1144,
+        674
+      ],
+      "heading": "The second time you do the job",
+      "direction": "Describe two separate human actions in this order: after changing the model or instructions, the next dispatcher reruns the saved case. The dispatcher personally reads the answer for conflicting times. The automatic test only checks strings; do not claim it detects contradictions. Start with the next dispatcher. Write fresh wording.",
+      "spoken_checks": [
+        "\\b(rerun|reruns|repeat|repeats|again|replay)\\b",
+        "\\b(read|reads|inspect|inspects|reviews|review|looks)\\b"
+      ],
+      "reject_spoken": [
+        "checks (if|whether) the brief distinguishes"
+      ]
+    }
+  ]
+}

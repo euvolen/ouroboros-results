@@ -56,5 +56,12 @@
     "The scripted reference also passed all cases and was faster on this fixed task.",
     "Replay speeds up movement and omits inference waits.",
     "Measurements come from one workstation."
-  ]
+  ],
+  "inference_summary": {
+    "local_model_calls": 100,
+    "weight_loads": 2,
+    "reused_calls": 98,
+    "median_client_call_s": 2.1955,
+    "timing_scope": "Client calls including the two loading calls; not robot reaction or stopping latency."
+  }
 }

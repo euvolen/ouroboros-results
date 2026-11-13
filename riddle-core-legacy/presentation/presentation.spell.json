@@ -1,0 +1,72 @@
+{
+  "apiVersion": "spell",
+  "kind": "Spell",
+  "spellType": "standard",
+  "metadata": {
+    "id": "riddle-legacy-presentation",
+    "name": "Inside Riddle Legacy",
+    "version": 1,
+    "usage": "general"
+  },
+  "groups": {},
+  "skills": {
+    "sources": {
+      "skill": "verify-walkthrough"
+    },
+    "write": {
+      "skill": "write-scene-narration"
+    },
+    "narrate": {
+      "skill": "synthesize-scene-speech"
+    },
+    "score": {
+      "skill": "compose-to-duration"
+    },
+    "assemble": {
+      "skill": "render-landscape"
+    }
+  },
+  "steps": {
+    "sources": {
+      "ref": "sources"
+    },
+    "write": {
+      "ref": "write"
+    },
+    "narrate": {
+      "ref": "narrate"
+    },
+    "score": {
+      "ref": "score"
+    },
+    "assemble": {
+      "ref": "assemble"
+    }
+  },
+  "arrows": [
+    {
+      "from": "input",
+      "to": "sources"
+    },
+    {
+      "from": "sources",
+      "to": "write"
+    },
+    {
+      "from": "write",
+      "to": "narrate"
+    },
+    {
+      "from": "narrate",
+      "to": "score"
+    },
+    {
+      "from": "score",
+      "to": "assemble"
+    },
+    {
+      "from": "assemble",
+      "to": "output"
+    }
+  ]
+}

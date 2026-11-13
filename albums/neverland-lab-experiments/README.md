@@ -29,6 +29,14 @@ The sound brief requested fast experimental funk and psychedelic soul, angular r
 | 11 | Galaxy Buffering Blues | 2:00 | [Listen / download](11.mp3?raw=true) |
 | 12 | Entropy's Cleaning Crew | 2:00 | [Listen / download](12.mp3?raw=true) |
 
+## What the spell carried between models
+
+The album was an executed Riddle spell. It reused a preparation-and-review group for each track, prepared the band's story, fictional tour and cover direction, then generated the artwork and songs and gathered the finished package. Codex helped author the workflow; production used local text, image and music models.
+
+That structure matters when a brief has several deliverables: the lyrics, cover, story and performances share the same album context, and packaging receives the actual generated files. The twelve text reviews requested no revisions. Their execution is recorded, but this run establishes no measured quality improvement from those review calls.
+
+The local writer was Devstral Small 2 24B; artwork used Z-Image Turbo; music and singing used ACE-Step 1.5 Turbo. A saved rebuild of the deliverables took **21.632 s**, made no additional inference calls and preserved identical mastered audio and cover files.
+
 ## Recorded result
 
 The album contains twelve two-minute songs, a full-album MP3, individual MP3/FLAC downloads, cover artwork, lyrics and an offline player. Production used local text, image and music models on the RX 7900 XT workstation.
@@ -37,4 +45,4 @@ The accepted music jobs reported **95.053 seconds combined** for 24 minutes of p
 
 The originals are stereo 48 kHz audio. All twelve MP3s, twelve FLACs and the full-album MP3 include the cover. A speech recognizer recovered seven of the twelve requested chorus hooks exactly; a human listening score has not been assigned.
 
-[Measurements and file hashes](results.json) · [All showcases](../../README.md)
+[Separate matched audio comparison](../../COMPARISONS.md#repeated-audio-work) · [Measurements and file hashes](results.json) · [All showcases](../../README.md)
