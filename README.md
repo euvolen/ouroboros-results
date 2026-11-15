@@ -19,6 +19,7 @@ Language becomes part of application logic: “choose the moments that make this
 | Produce a coherent media package | Carry one brief across text, images, sound and assembly; gather the finished files | [Riddle Team album](albums/neverland-lab-experiments/README.md): twelve songs, cover, lyrics, story and player |
 | Explain a product using approved material | Connect source checks, local writing, narration, music and the final edit | [Inside Riddle Legacy](riddle-core-legacy/presentation/README.md): a 91-second film, produced locally in **1 min 56 s** |
 | Operate through an existing robot controller | Turn measured observations into bounded model decisions and verify the physical result | [Panda placement](robotics/robosuite-pick-place/README.md): **20/20 ordinary placements and 20/20 recoveries** |
+| Coordinate work and ask for help | Connect local speech, observations, bounded actions and assistance between simulated robots | [Humanoid cooperation](robotics/humanoid-cooperation/README.md): a narrated 3m14s showcase, including one actual local-model assistance mission |
 | Let the next person review or change the work | Retain the workflow, inputs, outputs and saved checks | [Desktop walkthrough](riddle-core-legacy/README.md): one passing saved example and a separate failed final writer |
 
 ## How a spell carries the work
@@ -63,6 +64,7 @@ Measured examples on one RX 7900 XT workstation include:
 | [Mentats and three science films](videos/README.md) | Downloadable illustrated films with narration and music |
 | [Neverland Lab Experiments](albums/neverland-lab-experiments/README.md) | Twelve songs, cover, lyrics, fictional story, tour and player |
 | [Local-model Panda](robotics/robosuite-pick-place/README.md) | Successful simulated placements and recovery; scripted reference also succeeds and is faster |
+| [Humanoid walking, act/react and cooperation](robotics/humanoid-cooperation/README.md) | A 3m14s local-model showcase: walking, speech, camera changes, shared-room work and asking a second robot for help |
 | [Supported humanoid movements](robotics/humanoid-movement/README.md) | Wave, thumbs-up and supported foot clips |
 | [Pause/resume and cancel a wave](robotics/wave-lifecycle/README.md) | 20/20 cases: fourteen completed waves and six cancellations |
 | [The clap limit](robotics/clap-admission/README.md) | 0/3 claps completed; all three attempts returned to neutral |

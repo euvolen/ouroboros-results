@@ -17,6 +17,7 @@ A spell can combine several model types with deterministic tools. A model can in
 - [An album](albums/neverland-lab-experiments/README.md): writing, artwork, songs, lyrics, story and downloadable player.
 - [A presentation](riddle-core-legacy/presentation/README.md): approved screenshots to locally written narration, speech, music and a finished film.
 - [A robot task](robotics/robosuite-pick-place/README.md): local-model decisions cooperating with an existing simulated controller, with measured placement and recovery.
+- [Humanoid cooperation](robotics/humanoid-cooperation/README.md): walking, act/react, local speech and vision, shared-room work and a managed request for assistance, shown in one narrated film.
 - [Authoring and review](riddle-core-legacy/README.md): a visual workflow, retained handoffs, saved checks and visible failures.
 
 The examples substantiate orchestration and integration on their stated cases. They also preserve weak outputs and failed tasks. A graph running to completion does not by itself establish that its final answer is useful.
