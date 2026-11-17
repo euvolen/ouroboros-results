@@ -12,6 +12,19 @@ In the legacy desktop we gave a local model the note. Its brief included the rep
 
 That check passed once. It would also pass an answer that mentioned both times without saying which was cancelled. A dispatcher still has a meaningful decision to make: should the check require the brief to distinguish a cancelled collection from a confirmed one? Saving the case gives the next person a specific mistake to look for.
 
+### How a spell decides what happens next
+
+Sequencing and parallelism tell Riddle when work can start. The dispatch example raises a different question. If a note changes the collection time and the writer treats both times as current, who catches that before the brief goes out? A spell author has four controls for decisions like these.
+
+| Control | Decision the author can give Riddle |
+| --- | --- |
+| **Crossroads** | Choose who handles the note. Match its meaning against example requests and route it to one or more branches, such as a routine update or a cancellation review. |
+| **Reflection** | Give a reviewer the note and the draft. If the wording leaves both times in play, send the critique back to the writer. The author bounds the revision rounds and can pass only the final round downstream. |
+| **Spell-level supervision** | Define what counts as completion. In the supported single-root-skill mode, a step that must call a tool can succeed only when its requirements are met. Printing what looks like a tool call leaves the work unfinished. |
+| **Self-healing** | Choose what to do with that unfinished attempt. The supervisor can request a corrected call within the spell’s recovery budget. If the budget runs out, the failure stays visible. The Loom records the recovery actions and unmet requirements. |
+
+These are design choices illustrated with the dispatch scenario. The recorded dispatch run below exercised the saved evaluation. A supervisor can verify that a required action occurred. Judging whether the resulting sentence gives the dispatcher one unambiguous time takes a content check of its own.
+
 ### When is it worth building a workflow?
 
 | Something you find yourself doing | What you can hand over in Riddle Legacy |
@@ -28,7 +41,7 @@ The setup costs time. A task earns that time back when the instructions, handoff
 
 - **While exploring**, chat can branch from an earlier answer, and useful thought cards can be saved to the Grimoire. A person can try alternatives before deciding which steps deserve a permanent place.
 - **When evidence is scattered**, workspace Knowledge can find passages in an indexed local collection. A skill can receive permission to search it. A separate writer can work from the evidence passed to it. Search snippets and generated summaries still need review.
-- **When the next step depends on the input**, a Crossroad routes to a specialist. A delegated skill can have its own model and narrower tool permissions. A review step can send a draft back for a bounded revision.
+- **When a task needs a specialist**, a delegated skill can have its own model and narrower tool permissions.
 - **When a result needs an action**, a step can call a schema-checked tool directly. The coding agent can inspect a project and propose edits under its approval settings. Saved MCP connections let a workspace expose selected external tools.
 - **When you know the outcome before you know the steps**, a Goal can propose work from granted skills and submit a candidate for review against acceptance criteria. Runtime Assistance can help turn a recipe into workspace material for review.
 - **When someone else needs to operate it**, a Scroll freezes a spell definition, a Capsule can pin workspace dependencies, and the API lets another client run and watch a job. Per-step usage helps explain which model accounted for tokens and estimated spend.
